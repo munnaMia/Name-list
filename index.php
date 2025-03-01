@@ -7,6 +7,6 @@
     <title>Name List</title>
 </head>
 <body>
-    
+    <?php include("views/header.html");?>
 </body>
 </html>
