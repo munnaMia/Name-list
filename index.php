@@ -1,3 +1,7 @@
+<?php
+    include ("database.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,3 +14,8 @@
     <?php include("views/header.html");?>
 </body>
 </html>
+
+<?php
+    // Closing the my sql connection.
+    mysqli_close($connection);
+?>
