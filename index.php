@@ -11,9 +11,19 @@
     <title>Name List</title>
 </head>
 <body>
-    <?php include("views/header.html");?>
+
+    <!-- header  -->
+    <?php 
+        include("views/header.html");
+        include("views/form.html");
+        include("views/footer.html")
+    ?>
+
 </body>
 </html>
+
+
+
 
 <?php
     // Closing the my sql connection.
