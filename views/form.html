@@ -1,4 +1,5 @@
-<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+<form action="<? php htmlspecialchars(php $_SERVER['PHP_SELF'])?>" method="post">
+    <h2>Welcome to namelist</h2>
     <label for="username">Username</label>
     <input type="text" name="username" id="username" placeholder="Input your name" required>
     <br><br>
@@ -6,5 +7,7 @@
     <label for="regNumber">Email</label>
     <input type="number" name="regnumber" id="regNumber" placeholder="Enter your email" required>
     <br><br>
+
+    <input type="submit" name="submit" value="Submit">
 
 </form>

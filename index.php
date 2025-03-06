@@ -22,7 +22,28 @@
 </body>
 </html>
 
+<?php
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        // filltering the inputs 
+        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+        $regnumber = filter_input(INPUT_POST, "regnumber", FILTER_SANITIZE_NUMBER_INT) ;
 
+        if(empty($username)){
+            echo "Please enter a username";
+        }
+        elseif(empty($regnumber)){
+            echo "Please enter a password";
+        }
+        else{
+            $sql = "INSERT INTO userdb(name, reg_number)
+                    VALUE('$username', '$regnumber')";
+
+            mysqli_query($connection, $sql);
+
+            echo "You are registered now";
+        }
+    }
+?>
 
 
 <?php
